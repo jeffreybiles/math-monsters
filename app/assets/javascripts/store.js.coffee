@@ -1,6 +1,7 @@
-# http://emberjs.com/guides/models/using-the-store/
+App.ApplicationAdapter = DS.FixtureAdapter
 
-MathMonsters.Store = DS.Store.extend
-  # Override the default adapter with the `DS.ActiveModelAdapter` which
-  # is built to work nicely with the ActiveModel::Serializers gem.
-  adapter: '_ams'
+Ember.onLoad 'Ember.Application', (Application) ->
+  Application.initializer
+    name: 'app.store'
+    initialize: (container, application) ->
+      application.store = container.lookup("store:main")
