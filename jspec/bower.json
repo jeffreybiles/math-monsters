@@ -1,0 +1,14 @@
+{
+  "name": "math-monster-specs",
+  "version": "0.0.1",
+  "main": [
+    "math-monster-specs.js"
+  ],
+  "dependencies": {
+    "ember": "1.4.0",
+    "ember-data": "1.0.0-beta.7",
+    "handlebars": "*",
+    "ember-mocha-adapter": "*",
+    "chai-jquery": "*"
+  }
+}
