@@ -1,15 +1,8 @@
 describe "monster profile", ->
 
   beforeEach ->
-    saves = []
-    build = (typeKey, options) =>
-      object = @store.createRecord typeKey, options
-      saves.push object.save()
-      return object
-
-    @king = build('species', {name: 'King'})
-    @stannis = build('monster', {name: 'Stannis', species: @king, level: 2, expToNextLevel: 100, power: 5, maxHp: 15, defense: 2})
-    Ember.RSVP.all(saves)
+    @king = @build('species', {name: 'King'})
+    @stannis = @build('monster', {name: 'Stannis', species: @king, level: 2, expToNextLevel: 100, power: 5, maxHp: 15, defense: 2})
 
   beforeEach ->
     visit "/monsters/#{@stannis.get('id')}"
