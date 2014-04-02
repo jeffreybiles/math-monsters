@@ -7,7 +7,6 @@ module.exports = function(config){
     files: [
       // vendored code
       'jspec/bower_components/jquery/jquery.js',
-      'jspec/bower_components/moment/moment.js',
       'jspec/bower_components/handlebars/handlebars.js',
       'jspec/bower_components/ember/ember.js',
       'jspec/bower_components/ember-data/ember-data.js',
@@ -20,17 +19,15 @@ module.exports = function(config){
 
       // application code
       "app/assets/javascripts/app.js",
-      // FIXME: UGH LOAD ORDER
-      "app/assets/javascripts/models/searchable.js",
-      "app/assets/javascripts/models/**/*.js",
-      "app/assets/javascripts/controllers/**/*.js",
-      "app/assets/javascripts/components/**/*.js",
-      "app/assets/javascripts/views/**/*.js",
-      "app/assets/javascripts/helpers/**/*.js",
+      "app/assets/javascripts/models/**/*.coffee",
+      "app/assets/javascripts/controllers/**/*.coffee",
+      "app/assets/javascripts/components/**/*.coffee",
+      "app/assets/javascripts/views/**/*.coffee",
+      "app/assets/javascripts/helpers/**/*.coffee",
       "app/assets/javascripts/templates/**/*.hbs",
-      "app/assets/javascripts/routes/**/*.js",
-      "app/assets/javascripts/store.js",
-      "app/assets/javascripts/router.js",
+      "app/assets/javascripts/routes/**/*.coffee",
+      "app/assets/javascripts/store.coffee",
+      "app/assets/javascripts/router.coffee",
 
       // test code
       'jspec/spec_helper.coffee',

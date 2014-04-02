@@ -15,6 +15,12 @@ afterEachWithoutEmberRun = this.afterEach
 this.afterEach = (fn)->
   afterEachWithoutEmberRun -> Ember.run => fn.call(this)
 
-App.ApplicationAdapter = DS.FixtureAdapter.extend({
-  simulateRemoteResponse: false  
-})
+beforeEach ->
+  @build = (typeKey, options) =>
+    object = @store.createRecord typeKey, options
+    object.save()
+    return object
+
+beforeEach ->
+  App.reset()
+  @store = App.__container__.lookup("store:main")

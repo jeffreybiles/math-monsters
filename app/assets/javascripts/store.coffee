@@ -1,4 +1,5 @@
-App.ApplicationAdapter = DS.FixtureAdapter
+App.ApplicationAdapter = DS.FixtureAdapter.extend
+  simulateRemoteResponse: false  
 
 Ember.onLoad 'Ember.Application', (Application) ->
   Application.initializer
