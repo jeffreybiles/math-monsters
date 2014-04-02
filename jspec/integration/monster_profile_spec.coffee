@@ -1,10 +1,6 @@
 describe "monster profile", ->
 
   beforeEach ->
-    @king = @build('species', {name: 'King'})
-    @stannis = @build('monster', {name: 'Stannis', species: @king, level: 2, expToNextLevel: 100, power: 5, maxHp: 15, defense: 2})
-
-  beforeEach ->
     visit "/monsters/#{@stannis.get('id')}"
 
   it "shows the name of the monster", ->

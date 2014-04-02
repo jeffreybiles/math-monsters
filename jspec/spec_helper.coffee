@@ -24,3 +24,7 @@ beforeEach ->
 beforeEach ->
   App.reset()
   @store = App.__container__.lookup("store:main")
+
+beforeEach ->
+  @king = @build('species', {name: 'King'})
+  @stannis = @build('monster', {name: 'Stannis', species: @king, level: 2, expToNextLevel: 100, power: 5, maxHp: 15, defense: 2})
