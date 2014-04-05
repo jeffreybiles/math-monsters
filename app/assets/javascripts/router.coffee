@@ -5,6 +5,10 @@ App.Router.map ()->
     @resource 'monster', {path: ":id"}
   # @resource('posts')
 
+App.MonstersRoute = Ember.Route.extend
+  model: ->
+    @store.find('monster')
+
 App.MonsterRoute = Ember.Route.extend
   model: (params) ->
     @store.find('monster', params.id)
