@@ -16,4 +16,13 @@ App.Monster.FIXTURES = [{
   power: 5
   maxHp: 15
   defense: 2
+}, {
+  id: 2
+  name: 'Geoffrey'
+  species: 1
+  level: 1
+  expToNextLevel: 150
+  power: 10
+  maxHp: 6
+  defense: 1
 }]
