@@ -1,8 +1,8 @@
-Monsters!
+Monsters Index
 
 <ul class="monsters">
   {{#each monster in model}}
-    <li class="monster">{{monster.name}}</li>
+    <li class="monster">{{#link-to 'monster' monster}}{{monster.name}}, a level {{monster.level}} {{monster.species.name}}{{/link-to}}</li>
   {{/each}}
 </ul>
 
