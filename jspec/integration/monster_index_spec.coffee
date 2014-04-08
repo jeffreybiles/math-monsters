@@ -19,3 +19,10 @@ describe "monsterdex", ->
 
     it "shows the monster detail view", ->
       expect($('.monster-details .name').text()).to.include "Stannis"
+
+  describe "new monster form", ->
+    beforeEach ->
+      click '.create-monster'
+
+    it "is on new monster form", ->
+      expect(currentRouteName()).to.equal('monsters.new')

@@ -1,5 +1,6 @@
 Monsters Index
 
+{{#link-to 'monsters.new' class='create-monster'}}New Monster{{/link-to}}
 <ul class="monsters">
   {{#each monster in model}}
     <li class="monster">{{#link-to 'monster' monster}}{{monster.name}}, a level {{monster.level}} {{monster.species.name}}{{/link-to}}</li>
