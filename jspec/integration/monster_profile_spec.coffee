@@ -15,3 +15,10 @@ describe "monster profile", ->
     expect($('.power').text()).to.include('5')
     expect($('.max-hp').text()).to.include('15')
     expect($('.defense').text()).to.include('2')
+
+  describe "editing", ->
+    beforeEach ->
+      click '.edit-monster'
+
+    it "should be in edit mode", ->
+      expect(currentRouteName()).to.equal('monster.edit')

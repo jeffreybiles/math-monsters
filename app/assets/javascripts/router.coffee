@@ -2,7 +2,8 @@
 
 App.Router.map ()->
   @resource 'monsters', ->
-    @resource 'monster', {path: ":id"}
+    @resource 'monster', {path: ":id"}, ->
+      @route 'edit'
   # @resource('posts')
 
 App.MonstersRoute = Ember.Route.extend
