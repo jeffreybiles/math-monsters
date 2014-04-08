@@ -1,0 +1,1 @@
+App.MonsterShowController = Ember.ObjectController.extend()
