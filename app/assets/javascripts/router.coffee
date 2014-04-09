@@ -10,9 +10,9 @@ App.MonstersRoute = Ember.Route.extend
   model: ->
     @store.find('monster')
 
-# App.MonstersNewRoute = Ember.Route.extend
-#   model: ->
-    
+App.MonstersNewRoute = Ember.Route.extend
+  model: ->
+    @store.createRecord('monster')
 
 App.MonsterRoute = Ember.Route.extend
   model: (params) ->

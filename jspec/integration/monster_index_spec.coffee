@@ -26,3 +26,19 @@ describe "monsterdex", ->
 
     it "is on new monster form", ->
       expect(currentRouteName()).to.equal('monsters.new')
+
+    describe "filling it out", ->
+      beforeEach ->
+        fillIn 'form.edit-monster .name', 'Stanny'
+        # fillIn 'form.edit-monster .species-name', ''
+        fillIn 'form.edit-monster .level', '3'
+        click 'form.edit-monster .submit'
+
+      it "is on show page", ->
+        expect(currentRouteName()).to.equal('monster.show')
+
+      it "has the updated stats", ->
+        expect($(".name").text()).to.include('Stanny')
+        # expect($(".species-name").text()).to.include('Priest')
+        expect($(".level").text()).to.include('3')
+
