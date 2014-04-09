@@ -42,3 +42,9 @@ describe "monsterdex", ->
         # expect($(".species-name").text()).to.include('Priest')
         expect($(".level").text()).to.include('3')
 
+  describe "destroy monster", ->
+    beforeEach ->
+      click '.destroy-monster:eq(0)'
+
+    it "has one monster", ->
+      expect($('.monsters .monster').length).to.equal 1
