@@ -4,4 +4,7 @@ App.Species = DS.Model.extend
 App.Species.FIXTURES = [{
   id: 1
   name: 'King'
+}, {
+  id: 2
+  name: 'Priest'
 }]

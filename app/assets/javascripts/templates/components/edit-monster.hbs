@@ -1,0 +1,19 @@
+<!-- make this a component so I can just pass it a monster, and then put a speciesList property and a saveChanges action on it so I don't have to recreate them -->
+
+<form class="edit-monster">
+  Name: {{input class="name" type="text" value=monster.name}}
+  <br>
+  Species: {{view Ember.Select value=currentSpecies class="species-name" content=speciesList optionLabelPath="content.name" optionValuePath="content"}}
+  <br>
+  Level: {{input class="level" type="number" value=monster.level}}
+  <br>
+  Exp to Next Level: {{input class="exp-to-next-level" type="number" value=monster.expToNextLevel}}
+  <br>
+  Power: {{input class="power" type="number" value=monster.power}}
+  <br>
+  Max Hp: {{input class="max-hp" type="number" value=monster.maxHp}}
+  <br>
+  Defense: {{input class="defense" type="number" value=monster.defense}}
+  <br>
+  <button {{action "saveChanges"}} class="save-changes submit">Save Changes</button>
+</form>
