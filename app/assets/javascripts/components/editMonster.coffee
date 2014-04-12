@@ -2,11 +2,11 @@ App.EditMonsterComponent = Ember.Component.extend
   actions:
     saveChanges: ->
       @get("monster").save().then =>
-        App.Router.router.transitionTo "monster", @get('monster')
+        @sendAction('transition', @get('monster'))
 
-  currentSpecies: ((x, y, z) ->
-    if y
-      @get('monster').set('species', y)
+  currentSpecies: ((thing, selectedSpecies) ->
+    if selectedSpecies
+      @get('monster').set('species', selectedSpecies)
     else
       @get('monster.species')
   ).property('monster.species', 'currentSpecies')

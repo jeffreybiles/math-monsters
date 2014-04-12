@@ -10,6 +10,10 @@ App.MonstersRoute = Ember.Route.extend
   model: ->
     @store.find('monster')
 
+  actions: {
+    goToShow: (monster) ->
+      @transitionTo('monster.show', monster)
+  }
 App.MonstersNewRoute = Ember.Route.extend
   model: ->
     @store.createRecord('monster')
