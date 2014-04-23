@@ -1,0 +1,13 @@
+Species Index
+
+<!-- {{#link-to 'speciess.new' class='create-species'}}New Species{{/link-to}} -->
+<ul class="speciess">
+  {{#each species in model}}
+    <li class="species">
+      {{#link-to 'species' species}}{{species.name}}{{/link-to}} 
+      <button {{action "destroySpecies" species}} class="destroy-species">Destroy</button>
+    </li>
+  {{/each}}
+</ul>
+
+{{outlet}}

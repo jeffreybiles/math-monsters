@@ -29,6 +29,7 @@ beforeEach ->
 beforeEach ->
   clearFixturesFor(['Monster', 'Species'])
   @king = @build('species', {name: 'King'})
+  @priest = @build('species', {name: 'Priest'})  
   @stannis = @build('monster', {name: 'Stannis', species: @king, level: 2, expToNextLevel: 100, power: 5, maxHp: 15, defense: 2})
   @geoffrey = @build('monster', {name: 'Geoffrey', species: @king, level: 1, expToNextLevel: 150, power: 10, maxHp: 6, defense: 1})
   
