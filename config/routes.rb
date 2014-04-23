@@ -5,6 +5,7 @@ MathMonsters::Application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources "monsters"
+      resources "species"
     end
   end
   # You can have the root of your site routed with "root"

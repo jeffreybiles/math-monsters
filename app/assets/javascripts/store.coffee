@@ -1,6 +1,6 @@
-App.ApplicationAdapter = DS.FixtureAdapter.extend
-  simulateRemoteResponse: false  
-
+App.ApplicationAdapter = DS.ActiveModelAdapter.extend
+  namespace: 'api/v1'
+  
 Ember.onLoad 'Ember.Application', (Application) ->
   Application.initializer
     name: 'app.store'

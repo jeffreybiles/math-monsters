@@ -5,7 +5,7 @@ class CreateMonsters < ActiveRecord::Migration
       t.integer :level
       t.integer :exp_to_next_level
       t.decimal :power
-      t.decimal :maxHp
+      t.decimal :max_hp
       t.decimal :defense
 
       t.timestamps

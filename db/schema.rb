@@ -11,15 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140423012336) do
+ActiveRecord::Schema.define(version: 20140423014117) do
 
   create_table "monsters", force: true do |t|
     t.string   "name"
     t.integer  "level"
     t.integer  "exp_to_next_level"
     t.decimal  "power"
-    t.decimal  "maxHp"
+    t.decimal  "max_hp"
     t.decimal  "defense"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "species_id"
+  end
+
+  create_table "species", force: true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
