@@ -31,6 +31,7 @@ gem 'therubyracer'
 gem 'ember-rails'
 gem 'ember-source', '1.5.0'
 gem 'ember-data-source', '1.0.0.beta.7'
+gem 'active_model_serializers'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
